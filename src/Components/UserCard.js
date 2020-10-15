@@ -7,7 +7,7 @@ const UserCard = (data) => {
       <img src={data.data.avatar_url} alt="Avatar" />
       <CardContent>
         <h1>{data.data.login}</h1>
-        <a href={data.data.followers}>Followers link</a>
+        <a href={data.data.followers_url}>Followers</a>
       </CardContent>
     </Card>
   );
