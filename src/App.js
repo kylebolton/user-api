@@ -19,11 +19,7 @@ function App() {
   return (
     <div>
       {userData.map((user) => (
-        <UserCard
-          loginName={user.login}
-          avatarUrl={user.avatar_url}
-          followers={user.followers_url}
-        />
+        <UserCard userData={user} />
       ))}
     </div>
   );

@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const UserCard = (loginName, avatarUrl, followers) => {
+const UserCard = (userData) => {
   return (
     <Card>
-      <h1>{loginName}</h1>
-      <img src={avatarUrl} alt="Avatar" />
-      <a href={followers}>Followers link</a>
+      <h1>{userData.data.login}</h1>
+      <img src={userData.data.avatar_url} alt="Avatar" />
+      <a href={userData.data.followers}>Followers link</a>
     </Card>
   );
 };
