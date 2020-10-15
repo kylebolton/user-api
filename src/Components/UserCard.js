@@ -4,9 +4,11 @@ import styled from "styled-components";
 const UserCard = (data) => {
   return (
     <Card>
-      <h1>{data.data.login}</h1>
       <img src={data.data.avatar_url} alt="Avatar" />
-      <a href={data.data.followers}>Followers link</a>
+      <CardContent>
+        <h1>{data.data.login}</h1>
+        <a href={data.data.followers}>Followers link</a>
+      </CardContent>
     </Card>
   );
 };
@@ -14,6 +16,24 @@ const UserCard = (data) => {
 export default UserCard;
 
 const Card = styled.div`
-  background: #fff;
-  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  max-width: 200px;
+  margin: 15px;
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    border-radius: 5px 5px 0 0;
+    max-width: 200px;
+  }
+`;
+
+const CardContent = styled.div`
+  padding: 15px;
 `;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UserCard from "./Components/UserCard.js";
 import axios from "axios";
+import styled from "styled-components";
 
 function App() {
   const [userData, setUserData] = useState([]);
@@ -15,12 +16,19 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {userData.map((user, index) => (
-        <UserCard data={user} key={index} />
+    <Container>
+      {userData.map((userData, index) => (
+        <UserCard data={userData} key={index} />
       ))}
-    </div>
+    </Container>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+`;
