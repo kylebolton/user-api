@@ -21,7 +21,7 @@ const Card = styled.div`
   display: flex;
   border-radius: 5px;
   flex-direction: column;
-  max-width: 200px;
+  max-width: 235px;
   margin: 15px;
 
   &:hover {

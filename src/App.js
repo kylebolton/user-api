@@ -27,7 +27,7 @@ function App() {
 export default App;
 
 const Container = styled.div`
-  max-width: 960px;
+  max-width: 940px;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
