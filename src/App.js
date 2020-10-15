@@ -14,12 +14,10 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(userData);
-
   return (
     <div>
-      {userData.map((user) => (
-        <UserCard userData={user} />
+      {userData.map((user, index) => (
+        <UserCard data={user} key={index} />
       ))}
     </div>
   );
